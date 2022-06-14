@@ -22,12 +22,15 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/calLearn-git" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2AFYkXzoeXSB6eeOJzsEJ7vkKOl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -80,7 +83,7 @@
       <workItem from="1654967427260" duration="12000" />
       <workItem from="1655000284594" duration="2524000" />
       <workItem from="1655087346410" duration="4249000" />
-      <workItem from="1655168454925" duration="1527000" />
+      <workItem from="1655168454925" duration="8345000" />
     </task>
     <servers />
   </component>
@@ -113,6 +116,8 @@
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/a-calLearn" />
+      <path value="$PROJECT_DIR$/calLearn-git" />
+      <path value="$PROJECT_DIR$" />
     </ignored-roots>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
