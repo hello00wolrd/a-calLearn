@@ -5,13 +5,14 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>文章列表</title>
+    <title><?php date_default_timezone_set("Asia/Shanghai");
+    echo date("Y-m-d H:i:s"); ?></title>
     <style>
         table{
             width: 800px;
             margin: auto;
             border: solid 1px green;
-            border-spacing: 0px;
+            border-spacing: 0;
 
         }
         td{
@@ -37,7 +38,7 @@ $rows = mysqli_fetch_all($result);//将数据库中查询的结果集中的数�
 foreach ($rows as $row) {
     echo '<tr>';
     echo '<td>'.$row[0].'</td>';
-    echo '<td>'.$row[1].'</td>';
+    echo '<td><a href="read.php?id='.$row[0].'">'.$row[1].'</a></td>';
     echo '<td>'.$row[2].'</td>';
     echo '</tr>';
 }

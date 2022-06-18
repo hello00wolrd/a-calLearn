@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
-    <title>登录蜗牛笔记</title>
+    <title>登录my笔记</title>
     <style>
         /* 利用CSS的样式属性为一个或一批元素设定相同的样式 */
         /* 标签选择器，针对当面页面所有相同的标签，设置相同的样式 */
@@ -58,18 +58,28 @@
             border-radius: 5px;
         }
     </style>
-    <script>
-        function doPost(){
+    <script type="text/javascript">
+        function doPost() {
             //获取表单元素的值。
             var username = $("#username").val();
             var password = $("#password").val();
             var vcode = $("#vcode").val();
             //通过字符串拼接为一个请求正文
-            var  param = "username="+username+"&password="+password+"&vcode="+vcode;
+            var param = "username=" + username + "&password=" + password + "&vcode=" + vcode;
             //利用AJAX发送POST请求
             // window.alert(param); //调试请求内容
-            $.post('../php/login.php',param,function (data){
-                $("#username").val(data);
+            $.post('../php/login.php', param, function (data) {
+                // window.alert(data);//调试代码
+                if (data == 'loginTRUE<br>') {
+                    window.alert('登录成功');
+                    location.href = "../php/list.php";
+                } else if (data == 'loginFLASE<br>') {
+                    window.alert("登录失败");
+                } else if (data == 'vcodeFLASE<br>') {
+                    window.alert("验证码错误");
+                } else {
+                    window.alert("发生意外错误");
+                }
             });
         }
     </script>
@@ -89,6 +99,6 @@
     <button onclick="doPost()">登录</button>
 </div>
 
-<div class="footer top-100">版权所有©成都蜗牛创想科技有限公司 备案:蜀ICP备15014130号</div>
+<div class="footer top-100">版权所有©anonymous</div>
 </body>
 </html>
