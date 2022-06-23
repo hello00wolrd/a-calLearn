@@ -41,6 +41,10 @@
 <body>
 <table>
     <?php
+    session_start();
+    if($_SESSION['isLogin']!='true'){
+        die("请先登录");
+    }
     $conn = mysqli_connect("localhost", "root", "p-0p-0p-0", "learn") or die("数据库连接建立不成功");
     mysqli_query($conn, "set names utf8");
     $sql = "select articleid,headline,createtime from article where articleid < 31";

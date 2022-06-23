@@ -31,6 +31,12 @@ $sql = "select * from user where username= '$username' and password ='$password'
 $result = mysqli_query($conn, $sql);//$result获取到查询结果，称为结果集
 
 if (mysqli_num_rows($result) == 1) {
+    //登陆成功后,对当前的客户端分配一个SessionID,同时再服务器端记住当前客户端的登录状态
+    session_start();//启用PHP的Session模块,为客户端生成唯一ID
+    $_SESSION['isLogin']='ture';
+    $user = mysqli_fetch_assoc($result);
+    $_SESSION['username']=$user['username'];
+    $_SESSION['role']=$user['role'];
     echo "loginTRUE<br>";
 } else {
     echo "loginFLASE<br>";

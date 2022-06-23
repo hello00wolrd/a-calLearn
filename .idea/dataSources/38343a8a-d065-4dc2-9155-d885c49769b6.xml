@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="learn@localhost">
-  <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.39">
+  <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.40">
     <root id="1">
       <DefaultCasing>lower/lower</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -1271,9 +1271,9 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <Position>15</Position>
     </column>
     <key id="356" parent="334" name="PRIMARY">
-      <ColNames>articleid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>articleid</UnderlyingIndexColNames>
     </key>
     <column id="357" parent="335" name="commentid">
       <AutoIncrement>51</AutoIncrement>
@@ -1326,9 +1326,9 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <Position>11</Position>
     </column>
     <key id="368" parent="335" name="PRIMARY">
-      <ColNames>commentid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>commentid</UnderlyingIndexColNames>
     </key>
     <column id="369" parent="336" name="creditid">
       <AutoIncrement>192</AutoIncrement>
@@ -1364,9 +1364,9 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <Position>7</Position>
     </column>
     <key id="376" parent="336" name="PRIMARY">
-      <ColNames>creditid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>creditid</UnderlyingIndexColNames>
     </key>
     <column id="377" parent="337" name="favoriteid">
       <AutoIncrement>13</AutoIncrement>
@@ -1396,9 +1396,9 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <Position>6</Position>
     </column>
     <key id="383" parent="337" name="PRIMARY">
-      <ColNames>favoriteid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>favoriteid</UnderlyingIndexColNames>
     </key>
     <column id="384" parent="338" name="opinionid">
       <AutoIncrement>7</AutoIncrement>
@@ -1432,9 +1432,9 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <Position>7</Position>
     </column>
     <key id="391" parent="338" name="PRIMARY">
-      <ColNames>opinionid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>opinionid</UnderlyingIndexColNames>
     </key>
     <column id="392" parent="339" name="username">
       <DataType>varchar(50)|0s</DataType>
@@ -1460,9 +1460,9 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <Position>5</Position>
     </column>
     <key id="397" parent="339" name="PRIMARY">
-      <ColNames>username</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>username</UnderlyingIndexColNames>
     </key>
     <column id="398" parent="340" name="userid">
       <AutoIncrement>50</AutoIncrement>
@@ -1513,9 +1513,9 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <Position>10</Position>
     </column>
     <key id="408" parent="340" name="PRIMARY">
-      <ColNames>userid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>userid</UnderlyingIndexColNames>
     </key>
   </database-model>
 </dataSource>
