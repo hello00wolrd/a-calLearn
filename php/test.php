@@ -14,7 +14,7 @@ function calc($a){
     echo "the result is :$a <br>";
 }
 calc(100);*/
-function re_01($pattern, $source)
+/*function re_01($pattern, $source)
 {
     $result = preg_match($pattern, $source);
     if ($result) {
@@ -30,4 +30,14 @@ function re_phone(){
 function re_ip($source)
 {
     return $pattern = "/(^[01]?\d?\d$)|(^2[0-4]$)\d|(^25[0-5]$)\.(^[01]?\d?\d$)|(^2[0-4]$)\d|(^25[0-5]$)\.(^[01]?\d?\d$)|(^2[0-4]$)\d|(^25[0-5]$)\.(^[01]?\d?\d$)|(^2[0-4]$)\d|(^25[0-5]$)/";
-}
+}*/
+//for ($i=0;$i<=100;$i++){$linkList[] = $i;}
+//print_r($linkList);
+
+
+include "simple_html_dom.php";
+$html = file_get_html('http://www.woniunote.com/article/609');
+$node = $html->find("#content", 0);
+//echo $node->innertext;
+echo $node->plaintext;
+//echo $node->outertext;
